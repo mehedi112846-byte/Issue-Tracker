@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Github Issue Tracker Home Page</title>
+
+    <!-- for tailwind impliment  -->
+     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <!-- for font awesome   -->
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+     
+    <!-- for font implimentation   -->
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+     <link href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Manrope:wght@200..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <!-- for my custom design css add   -->
+     <link rel="stylesheet" href="design/index_design.css">
+
+    <!-- for daisyUi implementation   -->
+     <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+</head>
+
+<body>
+  <header>
+    <!-- for navigation section  -->
+     <div class="navbar bg-base-100 shadow-sm py-[17px] px-[5%]">
+        
+      <div class="flex-1">
+     <div class="flex items-center">
+        <img class="h-[31px] w-[31px]" src="assets/github-logo.png" alt="">
+        <a class="btn btn-ghost text-xl">GitHub Issues Tracker</a>
+     </div>
+     </div>
+
+      <div class="flex gap-3 items-center">
+       <input type="text" placeholder="Search" class="input input-bordered w-24 md:w-auto" />
+       <div>
+        <button class="btn btn-neutral bg-[#4A00FF] border-none rounded-[4px]">+ New Issue</button>
+       </div>
+        <div class="dropdown dropdown-end">
+        <div tabindex="0" role="button" class="btn btn-ghost btn-circle avatar">
+        </div>
+       </div>
+      </div>
+     </div>
+
+  </header>
+  
+  <main>
+    <section class="main_section">
+
+        <section class="main_top_section h-[88px] w-[69.37%] mx-auto mt-[60px] p-[24px] flex gap-2 rounded-[8px] shadow-md">
+          <button class="btn btn-neutral bg-[#4A00FF] border-none rounded-[4px]">All</button>
+          <button class="btn btn-neutral bg-[#4A00FF] border-none rounded-[4px]">Open</button>
+          <button class="btn btn-neutral bg-[#4A00FF] border-none rounded-[4px]">Closed</button>  
+        </section>
+
+        <section class="main_bottom_section h-[98px] w-[69.37%] mx-auto mt-[16px] p-[24px] flex justify-between items-center rounded-t-[8px] shadow-sm">
+            <div class="main_top_left flex gap-2 items-center">
+                <div>
+                    <img src="assets/Aperture.png" alt="">
+                </div>
+                <div>
+                    <h4 class="text-[20px] text-[#1F2937] font-semibold">50 Issues</h4>
+                    <p class="text-[16px] text-[#64748B] font-normal">Track and manage your project issues</p>
+                </div>
+            </div>
+
+            <div class="main_top_right flex gap-[16px]">
+                <h4 class="text-[16px] text-[#1F2937] font-medium"><span class="text-[#00A96E] mx-1"><i class="fa-solid fa-circle"></i></span>Open</h4>
+                <h4 class="text-[16px] text-[#1F2937] font-medium"><span class="text-[#A855F7] mx-1"><i class="fa-solid fa-circle"></i></span>Closed</h4>
+            </div>
+        </section>
+    </section>
+  </main>
+
+  <footer>
+
+  </footer>
+</body>
+
+</html>

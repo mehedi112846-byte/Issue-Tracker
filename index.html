@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Github Issue Tracker</title>
+
+    <!-- for tailwind impliment  -->
+     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <!-- for font awesome   -->
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+     
+    <!-- for font implimentation   -->
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+     <link href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Manrope:wght@200..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <!-- for my custom design css add   -->
+     <link rel="stylesheet" href="design/index_design.css">
+
+    <!-- for daisyUi implementation   -->
+     <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+</head>
+<body class="font_geist bg-[#F8FAFC] py-[78.5px]">
+   <header>
+
+   </header>
+   
+   <main>
+
+    <section class="login_form_container w-[20%] p-[32px] text-center bg-white shadow-md rounded-[8px] mx-auto">
+
+        <div class="login_upper_img_title">
+            <div class="github_img flex justify-center">
+                <img src="assets/github-logo.png" alt="">
+            </div>
+            <div class="my-[24px]">
+                <h2 class="text-[24px] text-[#1F2937] font-semibold">GitHub Issues Tracker</h2>
+                <p class="text-[16px] font-normal text-[#64748B]">Sign in to manage your issues</p>
+            </div>
+        </div>
+
+        <fieldset class="fieldset bg-base-200 border-base-300 rounded-box w-xs border p-4">
+
+         <label class="label text-[16px] text-[#1F2937]">Username</label>
+         <input type="email" class="input" placeholder="Enter Username" />
+         <label class="label text-[14px] text-[#4A00FF]">Default: admin</label>
+
+         <label class="label text-[16px] text-[#1F2937] mt-[16px]">Password</label>
+         <input type="password" class="input" placeholder="Enter Password" />
+         <label class="label text-[14px] text-[#4A00FF]">Default: admin123</label>
+
+         <button class="btn btn-neutral mt-4 bg-[#4A00FF] border-none rounded-[8px]">Sign In</button>
+       </fieldset>
+
+       <div class="flex py-5 items-center my-[24px]">
+        <div class="flex-grow border-t border-gray-300"></div>
+        <span class="flex-shrink mx-4 text-black text-sm font-medium">OR</span>
+        <div class="flex-grow border-t border-gray-300"></div>
+       </div>
+
+       <div>
+        <p class="mb-[8px]">Demo Credentials:</p>
+        <div class="bg-[#F8FAFC] p-[24px]">
+            <p class="text-[16px] text-[#1F2937]"><span class="font-semibold text-black">Username:</span>admin<br><span class="font-semibold text-black">Password:</span>admin123</p>
+        </div>
+       </div>
+
+    </section>
+    
+   </main>
+
+   <footer>
+
+   </footer>
+</body>
+</html>
