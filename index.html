@@ -31,7 +31,7 @@
    
    <main>
 
-    <section class="login_form_container w-[20%] p-[32px] text-center bg-white shadow-md rounded-[8px] mx-auto">
+    <section class="login_form_container sm:w-[20%] w-[83%] p-[32px] text-center bg-white shadow-md rounded-[8px] mx-auto">
 
         <div class="login_upper_img_title">
             <div class="github_img flex justify-center">
@@ -46,14 +46,14 @@
         <fieldset class="fieldset bg-base-200 border-base-300 rounded-box w-xs border p-4">
 
          <label class="label text-[16px] text-[#1F2937]">Username</label>
-         <input type="email" class="input" placeholder="Enter Username" />
+         <input id="Username" type="name" class="input" placeholder="Enter Username" />
          <label class="label text-[14px] text-[#4A00FF]">Default: admin</label>
 
          <label class="label text-[16px] text-[#1F2937] mt-[16px]">Password</label>
-         <input type="password" class="input" placeholder="Enter Password" />
+         <input id="password" type="password" class="input" placeholder="Enter Password" />
          <label class="label text-[14px] text-[#4A00FF]">Default: admin123</label>
 
-         <button class="btn btn-neutral mt-4 bg-[#4A00FF] border-none rounded-[8px]">Sign In</button>
+         <button id="Sign" class="btn btn-neutral mt-4 bg-[#4A00FF] border-none rounded-[8px]">Sign In</button>
        </fieldset>
 
        <div class="flex py-5 items-center my-[24px]">
@@ -76,5 +76,7 @@
    <footer>
 
    </footer>
+
+   <script src="index.js"></script>
 </body>
 </html>
