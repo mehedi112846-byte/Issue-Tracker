@@ -37,7 +37,7 @@
      </div>
      </div>
 
-      <div class="flex gap-3 items-center mx-auto">
+      <div class="flex gap-3 items-center">
        <input type="text" placeholder="Search" class="input input-bordered w-24 md:w-auto" />
        <div>
         <button class="btn btn-neutral bg-[#4A00FF] border-none rounded-[4px]">+ New Issue</button>
@@ -52,15 +52,16 @@
   </header>
   
   <main>
-    <section class="main_section">
+    <section class="main_section mb-[60px]">
 
-        <section class="main_top_section h-[88px] w-[69.37%] mx-auto mt-[60px] p-[24px] flex gap-2 rounded-[8px] shadow-md">
-          <button class="btn btn-neutral bg-[#4A00FF] border-none rounded-[4px]">All</button>
-          <button class="btn btn-neutral bg-[#4A00FF] border-none rounded-[4px]">Open</button>
-          <button class="btn btn-neutral bg-[#4A00FF] border-none rounded-[4px]">Closed</button>  
+        <section class="main_top_section h-[88px] w-[69.37%] mx-auto mt-[60px] p-[24px] flex gap-2 rounded-[8px] shadow-[0px_0px_6.5px_rgba(209,213,219,2)]">
+          <button id="button_all" class="btn btn-neutral bg-[#4A00FF] border-none rounded-[4px]">All</button>
+          <button id="button_open" class="btn btn-neutral bg-[#4A00FF] border-none rounded-[4px]">Open</button>
+          <button id="button_closed" class="btn btn-neutral bg-[#4A00FF] border-none rounded-[4px]">Closed</button>  
         </section>
 
-        <section class="main_bottom_section h-[98px] w-[69.37%] mx-auto mt-[16px] p-[24px] flex justify-between items-center rounded-t-[8px] shadow-sm">
+        <section class="main_bottom_section_container w-[69.37%] mx-auto mt-[16px] shadow-[0px_0px_10px_rgba(209,213,219,0.5)]">
+            <section class="main_bottom_section h-[98px] p-[24px] flex justify-between items-center rounded-t-[8px] shadow-sm">
             <div class="main_top_left flex gap-2 items-center">
                 <div>
                     <img src="assets/Aperture.png" alt="">
@@ -76,12 +77,45 @@
                 <h4 class="text-[16px] text-[#1F2937] font-medium"><span class="text-[#A855F7] mx-1"><i class="fa-solid fa-circle"></i></span>Closed</h4>
             </div>
         </section>
+        <section id="card_container" class="card_container w-[100%] mx-auto p-[24px] rounded-[8px] shadow-sm flex flex-wrap gap-[13px]">
+
+        <!-- <div class="card w-[24.2%] shadow-[0px_0px_10px_rgba(209,213,219,0.5)]">
+
+            <div class="card_upper_part shadow-sm rounded-t-[8px] w-[100%] p-[16px]">
+                <div class="card_top_icons flex justify-between">
+                <img class="w-[24px] h-[24px] rounded-full" src="assets/Open-Status.png" alt="">
+                <button class="bg-[#FEECEC] text-[#EF4444] text-[12px] font-medium rounded-full px-[15px] py-[5px]">HIGH</button>
+            </div>
+
+            <div class="card_midle_text">
+                <h3 class="text-[14px] text-[#1F2937] font-semibold mt-[12px]">Fix navigation menu on mobile devices</h3>
+                <p class="text-[12px] text-[#64748B] font-normal mt-[8px]">The navigation menu doesn't collapse properly on mobile devices...</p>
+            </div>
+
+            <div class="card_lower_flex_items flex gap-[4px] mt-[12px]">
+                <button class="bg-[#FEECEC] text-[#EF4444] text-[12px] font-medium rounded-full px-[15px] py-[3px] flex gap-[2px] items-center"><span><img src="assets/BugDroid.png" alt=""></span>Bug</button>
+                <button class="bg-[#FFF8DB] text-[#D97706] text-[12px] font-medium rounded-full px-[15px] py-[3px] flex gap-[2px] items-center"><span><img src="assets/Lifebuoy.png" alt=""></span>help wanted</button>
+            </div>
+            </div>
+
+            <div class="card_lower_part shadow-sm rounded-b-[8px] w-[100%] p-[16px]">
+                <p class="text-[12px] text-[#64748B] font-normal">#1by john_doe</p>
+                <p class="text-[12px] text-[#64748B] font-normal">1/15/2024</p>
+            </div>
+
+        </div> -->
+        
+    </section>
+        </section>
+
     </section>
   </main>
 
   <footer>
 
   </footer>
+
+  <script src="home.js"></script>
 </body>
 
 </html>
