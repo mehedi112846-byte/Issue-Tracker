@@ -55,9 +55,9 @@
     <section class="main_section mb-[60px]">
 
         <section class="main_top_section h-[88px] w-[69.37%] mx-auto mt-[60px] p-[24px] flex gap-2 rounded-[8px] shadow-[0px_0px_6.5px_rgba(209,213,219,2)]">
-          <button id="button_all" class="btn btn-neutral bg-[#4A00FF] border-none rounded-[4px]">All</button>
-          <button id="button_open" class="btn btn-neutral bg-[#4A00FF] border-none rounded-[4px]">Open</button>
-          <button id="button_closed" class="btn btn-neutral bg-[#4A00FF] border-none rounded-[4px]">Closed</button>  
+          <button onclick="buttonColor('button_all'); show_all()" id="button_all" class="btn btn-neutral bg-[#4A00FF] text-white border-none rounded-[4px]">All</button>
+          <button onclick="buttonColor('button_open'); show_open()" id="button_open" class="btn btn-neutral text-white border-none rounded-[4px]">Open</button>
+          <button onclick="buttonColor('button_closed'); show_closed()" id="button_closed" class="btn btn-neutral text-white border-none rounded-[4px]">Closed</button>  
         </section>
 
         <section class="main_bottom_section_container w-[69.37%] mx-auto mt-[16px] shadow-[0px_0px_10px_rgba(209,213,219,0.5)]">
@@ -67,7 +67,10 @@
                     <img src="assets/Aperture.png" alt="">
                 </div>
                 <div>
-                    <h4 class="text-[20px] text-[#1F2937] font-semibold">50 Issues</h4>
+                    <div class="flex gap-[10px]">
+                        <h4 class="text-[20px] text-[#1F2937] font-semibold">50</h4>
+                        <h4 class="text-[20px] text-[#1F2937] font-semibold">Issues</h4>
+                    </div>
                     <p class="text-[16px] text-[#64748B] font-normal">Track and manage your project issues</p>
                 </div>
             </div>

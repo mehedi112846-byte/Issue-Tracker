@@ -3,11 +3,45 @@ const button_open = document.getElementById("button_open");
 const button_closed = document.getElementById("button_closed");
 
 
-button_all.addEventListener("click",function(){
-    button_open.classList.remove("btn btn-neutral bg-[#4A00FF] border-none rounded-[4px]");
-    button_closed.classList.remove("btn btn-neutral bg-[#4A00FF] border-none rounded-[4px]");
+function buttonColor(clickedButtonId){
+    const buttonsId = ["button_all", "button_open", "button_closed"];
+    buttonsId.forEach(id=>{
+        const btn = document.getElementById(id);
+        if(btn){
+            btn.classList.remove("bg-[#4A00FF]");
+        }
+    });
+    const activeBtn = document.getElementById(clickedButtonId);
+    if(activeBtn){
+        activeBtn.classList.add("bg-[#4A00FF]");
+    }
+}
+
+
+function show_all(){
     loadCards();
-})
+};
+
+function show_open(){
+    fetch("https://phi-lab-server.vercel.app/api/v1/lab/issues")
+    .then(res => res.json())
+    .then(json =>{
+        const allData = json.data;
+        const openCards = allData.filter(cards=> cards.status === 'open');
+        displayCards(openCards);
+    });
+};
+
+
+function show_closed(){
+    fetch("https://phi-lab-server.vercel.app/api/v1/lab/issues")
+    .then(res => res.json())
+    .then(json =>{
+        const allData = json.data;
+        const closedCards = allData.filter(cards=> cards.status === 'closed');
+        displayCards(closedCards);
+    });
+};
 
 
 const load_modals=(id)=>{
