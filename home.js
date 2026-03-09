@@ -1,6 +1,7 @@
 const button_all = document.getElementById("button_all");
 const button_open = document.getElementById("button_open");
 const button_closed = document.getElementById("button_closed");
+const issue_count = document.getElementById("issue_count");
 
 
 function buttonColor(clickedButtonId){
@@ -107,10 +108,10 @@ const loadCards=()=>{
 const displayCards=(cards)=>{
     const card_container = document.getElementById("card_container");
     card_container.innerHTML = "";
-    // conditions will be here
+    issue_count.innerText = cards.length;
     for(let card of cards){
         const carDiv = document.createElement("div");
-        carDiv.className = "card w-[24.2%] shadow-[0px_0px_10px_rgba(209,213,219,0.5)]";
+        carDiv.className = "card sm:w-[24.2%] w-[100%] shadow-[0px_0px_10px_rgba(209,213,219,0.5)]";
         carDiv.innerHTML = `
         <div class="card w-[100%] shadow-[0px_0px_2px_rgba(209,213,219,0.5)] ${card.status === 'closed' ? 'border-t-[4px] border-[#A855F7]' : 'border-t-[4px] border-[#00A96E]'}">
 
@@ -142,3 +143,19 @@ const displayCards=(cards)=>{
 };
 
 loadCards();
+
+
+document.getElementById("Search_button").addEventListener("click",()=>{
+    const Search_input = document.getElementById("Search_input");
+    const search_value = Search_input.value.trim().toLowerCase();
+    fetch("https://phi-lab-server.vercel.app/api/v1/lab/issues")
+    .then(res=>res.json())
+    .then(json=>{
+        const all_data = json.data;
+        const cards = all_data.filter(card=>{
+            const cardTitle = card.title ? card.title.toLowerCase() : "";
+            return cardTitle.includes(search_value);
+        });
+        displayCards(cards);
+    });
+});
